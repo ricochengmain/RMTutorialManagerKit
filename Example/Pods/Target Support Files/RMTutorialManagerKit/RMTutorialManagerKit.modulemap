@@ -1,0 +1,6 @@
+framework module RMTutorialManagerKit {
+  umbrella header "RMTutorialManagerKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
