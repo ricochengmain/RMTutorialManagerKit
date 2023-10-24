@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RMTutorialManagerKit'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'UI教程鎖定功能。'
   
   # This description is used to generate tags and improve search results.

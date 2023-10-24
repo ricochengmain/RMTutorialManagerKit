@@ -167,19 +167,16 @@ internal class RMTutorialModel {
     }
 }
 
+private var tutorialKeyAssociationKey: UInt8 = 0
+
 private extension UIView {
-    private struct AssociatedKeys {
-        static var tutorialKey = "Tutorial_Key"
-    }
-    
+
     var tutorialKey: String {
         get {
-            // 获取关联对象，如果没有关联对象则返回默认值 ""
-            return objc_getAssociatedObject(self, &AssociatedKeys.tutorialKey) as? String ?? ""
+            return objc_getAssociatedObject(self, &tutorialKeyAssociationKey) as? String ?? ""
         }
         set {
-            // 设置关联对象
-            objc_setAssociatedObject(self, &AssociatedKeys.tutorialKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &tutorialKeyAssociationKey, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
         }
     }
 }
