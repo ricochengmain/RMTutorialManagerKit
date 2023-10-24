@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RMTutorialManagerKit'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'UI教程鎖定功能。'
   
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/ricochengmain/RMTutorialManagerKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '15.0'
   
   s.source_files = 'RMTutorialManagerKit/**/*'
   

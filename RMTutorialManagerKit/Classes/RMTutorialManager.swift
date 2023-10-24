@@ -14,6 +14,7 @@ public enum Position {
     case right
 }
 
+@available(iOS 13.0, *)
 public class RMTutorialManager {
     
     public static func add(itemView: UIView, tipText: String, position: Position, identifier: String) {
@@ -47,8 +48,11 @@ public class RMTutorialManager {
         
         // Create the MaskView
         let maskView = RMTutorialMaskView(frame: UIScreen.main.bounds, model: model)
-        UIApplication.shared.windows.first?.addSubview(maskView)
-        self.maskView = maskView
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+            let window = windowScene.windows.first {
+            window.addSubview(maskView)
+            self.maskView = maskView
+        }
     }
     
     @objc private static func dismiss() {
